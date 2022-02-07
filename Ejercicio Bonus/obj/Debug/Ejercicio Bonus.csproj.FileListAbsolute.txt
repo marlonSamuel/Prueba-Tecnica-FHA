@@ -1,0 +1,7 @@
+C:\Users\senpai\Desktop\PRACTICAS\C#\Prueba tecnica FHA\Ejercicio Bonus\bin\Debug\Ejercicio Bonus.exe.config
+C:\Users\senpai\Desktop\PRACTICAS\C#\Prueba tecnica FHA\Ejercicio Bonus\bin\Debug\Ejercicio Bonus.exe
+C:\Users\senpai\Desktop\PRACTICAS\C#\Prueba tecnica FHA\Ejercicio Bonus\bin\Debug\Ejercicio Bonus.pdb
+C:\Users\senpai\Desktop\PRACTICAS\C#\Prueba tecnica FHA\Ejercicio Bonus\obj\Debug\Ejercicio Bonus.csproj.CoreCompileInputs.cache
+C:\Users\senpai\Desktop\PRACTICAS\C#\Prueba tecnica FHA\Ejercicio Bonus\obj\Debug\Ejercicio Bonus.exe
+C:\Users\senpai\Desktop\PRACTICAS\C#\Prueba tecnica FHA\Ejercicio Bonus\obj\Debug\Ejercicio Bonus.pdb
+C:\Users\senpai\Desktop\PRACTICAS\C#\Prueba tecnica FHA\Ejercicio Bonus\obj\Debug\Ejercicio Bonus.csprojAssemblyReference.cache

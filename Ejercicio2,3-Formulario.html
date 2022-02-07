@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <hr />
+        <h3>Datos del usuario</h3>
+        <form id="formUser" ref="formUser">
+            <div class="row">
+
+                <div class="form-group col-md-4 col-lg-4 col-sm-12">
+                    <label>Nombre</label>
+                    <input class="form-control" name="nombre" id="nombre" type="text" placeholder="Ingrese nombre" required />
+                </div>
+                <div class="form-group col-md-4 col-lg-4 col-sm-12">
+                    <label>DPI</label>
+                    <input class="form-control" name="dpi" id="dpi" type="number" maxlength="13" placeholder="Ingrese dpi" required />
+                </div>
+                <div class="form-group col-md-4 col-lg-4 col-sm-12">
+                    <label>Fecha usuario</label>
+                    <input class="form-control" name="fecha" id="fecha" type="date" placeholder="ingrese fecha" required />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary"> Agregar</button>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <div class="row">
+            <table border="1" class="table" id="tablaUser">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>DPI</th>
+                        <th>Fecha</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="bodyUser"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    const form = document.querySelector("#formUser");
+    let users = [];
+
+    form.addEventListener("submit", (ev) => {
+        ev.preventDefault()
+        const data = new Object(
+            {
+                nombre: document.getElementById("nombre").value,
+                dpi: document.getElementById("dpi").value,
+                fecha: document.getElementById("fecha").value
+            });
+        
+        //validar dpi
+        let _dpi = users.some(x => x.dpi === data.dpi);
+        if (_dpi) {
+            alert("dpi "+data.dpi+" ya existe, y debe ser unico");
+            return
+        }
+        users.push(data);
+        agregarFila(users);
+        clearForm();
+    })
+
+    //agregar fila y cargar tabla
+    function agregarFila(data) {
+        var tabla = document.getElementById("tablaUser");
+
+        for (var i = 1; i < tabla.rows.length;) {
+            tabla.deleteRow(i);
+        }
+
+        data.forEach(user => {
+            let row = tabla.insertRow();
+            let nombre = row.insertCell(0);
+            nombre.innerHTML = user.nombre;
+            let dpi = row.insertCell(1);
+            dpi.innerHTML = user.dpi;
+            let fecha = row.insertCell(2);
+            fecha.innerHTML = user.fecha;
+            let accion = row.insertCell(3);
+            accion.innerHTML = '<button class="btn btn-danger btn-xs" type="button" onClick="eliminarUsuario(' + user.dpi + ')" >Eliminar</button>'
+        });
+    }
+
+    //elijinar usuario especifico
+    function eliminarUsuario(dpi) {
+        var row = users.find(x => x.dpi == dpi);
+        const index = users.findIndex(x=> x.dpi == dpi);
+        users.splice(index, 1);
+        agregarFila(users);
+    }
+
+    //limpiar formulario
+    function clearForm() {
+        document.getElementById("nombre").value = "";
+        document.getElementById("dpi").value = "";
+        document.getElementById("fecha").valueAsDate = null;
+    }
+</script>

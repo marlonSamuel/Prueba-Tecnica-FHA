@@ -1,0 +1,6 @@
+C:\Users\senpai\Desktop\PRACTICAS\C#\Prueba tecnica FHA\Ejercicio 1 - Colección clientes\bin\Debug\Ejercicio 1 - Colección clientes.exe.config
+C:\Users\senpai\Desktop\PRACTICAS\C#\Prueba tecnica FHA\Ejercicio 1 - Colección clientes\bin\Debug\Ejercicio 1 - Colección clientes.exe
+C:\Users\senpai\Desktop\PRACTICAS\C#\Prueba tecnica FHA\Ejercicio 1 - Colección clientes\bin\Debug\Ejercicio 1 - Colección clientes.pdb
+C:\Users\senpai\Desktop\PRACTICAS\C#\Prueba tecnica FHA\Ejercicio 1 - Colección clientes\obj\Debug\Ejercicio 1 - Colección clientes.csproj.CoreCompileInputs.cache
+C:\Users\senpai\Desktop\PRACTICAS\C#\Prueba tecnica FHA\Ejercicio 1 - Colección clientes\obj\Debug\Ejercicio 1 - Colección clientes.exe
+C:\Users\senpai\Desktop\PRACTICAS\C#\Prueba tecnica FHA\Ejercicio 1 - Colección clientes\obj\Debug\Ejercicio 1 - Colección clientes.pdb
